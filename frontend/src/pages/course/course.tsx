@@ -1,8 +1,8 @@
+import CourseCard from "../../components/CourseCard";
 import { Clock, Users, Gem } from "lucide-react";
-import CourseCard from "./CourseCard";
 
+// Aquí normalmente harías una llamada a tu API 🚀
 function getCourseData(id: string) {
-  // Aquí normalmente harías una llamada a tu API
   return {
     id: Number.parseInt(id),
     title: "Desarrollo Web Fullstack",
@@ -56,7 +56,7 @@ function getCourseData(id: string) {
   };
 }
 
-const CourseDetails = () => {
+const Course = () => {
   const course = getCourseData("1");
   return (
     <div className="min-h-screen bg-gray-50">
@@ -170,4 +170,4 @@ const CourseDetails = () => {
   );
 };
 
-export default CourseDetails;
+export default Course;
