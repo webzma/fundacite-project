@@ -5,46 +5,31 @@ function getTeachers() {
   return [
     {
       id: 1,
-      name: "María González",
+      name: "Wilberk Ledezma",
       specialty: "Desarrollo Web",
-      image: "/avatar.webp",
+      image: "/wilberk.webp",
       coursesCount: 3,
     },
     {
       id: 2,
       name: "Carlos Rodríguez",
       specialty: "Diseño UX/UI",
-      image: "/avatar.webp",
+      image: "/carlos.jpeg",
 
       coursesCount: 2,
     },
     {
       id: 3,
-      name: "Laura Martínez",
+      name: "Daniel Ochoa",
       specialty: "Marketing Digital",
-      image: "/avatar.webp",
-
+      image: "/daniel.jpeg",
       coursesCount: 4,
     },
     {
       id: 4,
-      name: "Alejandro Sánchez",
+      name: "Anthony Ramirez",
       specialty: "Ciencia de Datos",
-      image: "/avatar.webp",
-      coursesCount: 3,
-    },
-    {
-      id: 5,
-      name: "Ana López",
-      specialty: "Desarrollo Móvil",
-      image: "/avatar.webp",
-      coursesCount: 2,
-    },
-    {
-      id: 6,
-      name: "Roberto Fernández",
-      specialty: "Inteligencia Artificial",
-      image: "/avatar.webp",
+      image: "/anthony.jpeg",
       coursesCount: 3,
     },
   ];
