@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface CourseCardProps {
   course: {
     id: number;
@@ -19,12 +21,12 @@ export default function CourseCard({ course }: CourseCardProps) {
           className="w-full object-cover size-[280px]"
         />
         <div className="absolute inset-0 bg-blue-gradient opacity-0 hover:opacity-75 transition-opacity duration-300 flex items-center justify-center">
-          <a
-            href={`/courses/${course.id}`}
+          <Link
+            to={`/courses/1`}
             className="text-white text-lg font-semibold hover:underline"
           >
             Ver detalles
-          </a>
+          </Link>
         </div>
       </div>
       <div className="p-6">
