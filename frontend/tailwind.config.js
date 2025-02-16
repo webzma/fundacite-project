@@ -53,7 +53,8 @@ export default {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "blue-gradient": "linear-gradient(to right, #00c6ff, #0055ff)",
+        "blue-gradient":
+          "linear-gradient(to right, var(--blue-gradient-start), var(--blue-gradient-end))",
       },
       boxShadow: {
         neon: '0 0 5px theme("colors.blue.400"), 0 0 20px theme("colors.blue.700")',
