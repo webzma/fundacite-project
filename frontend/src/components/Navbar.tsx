@@ -24,6 +24,12 @@ export default function Navbar() {
             >
               Profesores
             </a>
+            <a
+              href="/about"
+              className="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 hover:text-white transition-colors duration-300"
+            >
+              Sobre nosotros
+            </a>
           </div>
         </div>
       </div>
