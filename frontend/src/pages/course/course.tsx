@@ -70,7 +70,7 @@ const Course = () => {
           </p>
           <div className="flex items-center space-x-4">
             <img
-              src={"/avatar.webp"}
+              src={"/wilberk.webp"}
               alt="Instructor"
               width={70}
               height={70}
