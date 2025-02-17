@@ -97,7 +97,7 @@ const Courses = () => {
       <div className="bg-blue-gradient text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-bold mb-4">Explora Nuestros Cursos</h1>
-          <p className="text-xl">
+          <p className="text-xl text-gray-200">
             Encuentra el curso perfecto para impulsar tu carrera
           </p>
         </div>
