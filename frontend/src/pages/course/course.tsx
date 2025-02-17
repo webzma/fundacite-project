@@ -63,7 +63,7 @@ const Course = () => {
       <div className="bg-blue-gradient text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold mb-4">Desarrollo Web Fullstack</h1>
-          <p className="text-xl mb-6">
+          <p className="text-xl mb-6 text-gray-200">
             Aprende a construir aplicaciones web completas desde cero. Este
             curso cubre tanto el desarrollo frontend como backend, utilizando
             las tecnologías más demandadas en la industria.
@@ -72,11 +72,13 @@ const Course = () => {
             <img
               src={"/wilberk.webp"}
               alt="Instructor"
-              width={70}
-              height={70}
-              className="rounded-full size-[70px] object-cover"
+              width={50}
+              height={50}
+              className="rounded-full size-[50px] object-cover"
             />
-            <span className="text-lg">Instructor: Wilberk Ledezma</span>
+            <span className="text-lg text-gray-200">
+              Instructor: Wilberk Ledezma
+            </span>
           </div>
         </div>
       </div>
@@ -87,19 +89,19 @@ const Course = () => {
             <section className="bg-white rounded-lg shadow-lg p-6 mb-8">
               <h2 className="text-2xl font-bold mb-4">Acerca de este curso</h2>
               <p className="text-gray-600 mb-4">{course.description}</p>
-              <div className="grid grid-cols-3 gap-4 text-center">
+              <div className="grid grid-cols-3 gap-4 text-center pt-4">
                 <div className="flex flex-col items-center">
-                  <Clock className="text-[#0072ff]" size="30" />
+                  <Clock className="text-[#003366]" size="30" />
                   <span className="text-sm text-gray-500">Duración</span>
                   <span className="font-semibold">12 semanas</span>
                 </div>
                 <div className="flex flex-col items-center">
-                  <Users className="text-[#0072ff]" size="30" />
+                  <Users className="text-[#003366]" size="30" />
                   <span className="text-sm text-gray-500">Estudiantes</span>
                   <span className="font-semibold">422</span>
                 </div>
                 <div className="flex flex-col items-center">
-                  <Gem className="text-[#0072ff]" size="30" />
+                  <Gem className="text-[#003366]" size="30" />
                   <span className="text-sm text-gray-500">Nivel</span>
                   <span className="font-semibold">Intermedio</span>
                 </div>

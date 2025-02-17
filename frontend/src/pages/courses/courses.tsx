@@ -105,27 +105,27 @@ const Courses = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-          <div className="relative w-full md:w-1/3 mb-4 md:mb-0">
+          <div className="relative w-full md:w-1/3 mb-4 md:mb-0 focus-within:text-[#003366] text-gray-500">
             <input
               type="text"
               placeholder="Buscar cursos por título o instructor..."
-              className="w-full p-2 pl-10 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-2 pl-10 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#003366] text-gray-800"
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
             />
-            <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
+            <Search className="absolute left-3 top-2.5 h-5 w-5  " />
           </div>
           <div className="flex items-center">
-            <Filter className="h-5 w-5 text-gray-500 mr-2" />
+            <Filter className="h-5 w-5 text-[#003366] mr-2" />
             <Select
               value={selectedCategory}
               onValueChange={(value) => setSelectedCategory(value)}
             >
-              <SelectTrigger className="w-[180px] focus:ring-2 focus:ring-blue-500">
+              <SelectTrigger className="w-[180px] focus:ring-2 focus:ring-[#003366]">
                 <SelectValue placeholder="Select a fruit" />
               </SelectTrigger>
               <SelectContent>
-                <SelectGroup>
+                <SelectGroup className="text-gray-700">
                   {categories.map((category) => (
                     <SelectItem key={category} value={category}>
                       {category}

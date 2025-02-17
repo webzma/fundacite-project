@@ -32,13 +32,13 @@ const Home = () => {
               <h1 className="text-4xl md:text-6xl font-bold mb-4">
                 Bienvenido a Fundacite
               </h1>
-              <p className="text-xl md:text-2xl mb-8">
+              <p className="text-xl md:text-2xl mb-8 text-gray-200">
                 Descubre una nueva forma de aprender con los mejores
                 profesionales
               </p>
               <Link
                 to="/courses"
-                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-blue-100 transition duration-300 shadow-neon"
+                className="inline-block bg-white text-[#003366] font-semibold py-3 px-6 rounded-lg hover:bg-blue-100 transition duration-300 shadow-neon"
               >
                 Explora nuestros cursos
               </Link>
@@ -47,7 +47,7 @@ const Home = () => {
         </section>
 
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl font-bold text-center text-blue-800 mb-12">
+          <h2 className="text-3xl font-bold text-center text-[#003366] mb-12">
             Cursos Destacados
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

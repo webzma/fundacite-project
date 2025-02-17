@@ -31,7 +31,9 @@ function TeacherCard({ teacher }: TeacherCardProps) {
         </div>
       </div>
       <div className="p-6">
-        <h3 className="font-bold text-xl mb-2 text-blue-800">{teacher.name}</h3>
+        <h3 className="font-bold text-xl mb-2 text-[#003366]">
+          {teacher.name}
+        </h3>
         <p className="text-gray-600 mb-4">{teacher.specialty}</p>
         <div className="flex items-center text-blue-600">
           <BookOpen className="h-5 w-5 mr-2" />

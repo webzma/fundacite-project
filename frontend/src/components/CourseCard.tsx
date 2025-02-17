@@ -30,7 +30,9 @@ export default function CourseCard({ course }: CourseCardProps) {
         </div>
       </div>
       <div className="p-6">
-        <h3 className="font-bold text-xl mb-2 text-blue-800">{course.title}</h3>
+        <h3 className="font-bold text-xl mb-2 text-[#003366]">
+          {course.title}
+        </h3>
         <p className="text-gray-600 mb-4">Instructor: {course.instructor}</p>
         <Link
           to={`/courses/${course.id}`}
