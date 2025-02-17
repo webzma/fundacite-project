@@ -9,17 +9,17 @@ const teamMembers = [
   {
     name: "Carlos Rodríguez",
     role: "Director de Tecnología",
-    image: "/anthony.jpeg",
+    image: "/anthony.webp",
   },
   {
     name: "Laura Martínez",
     role: "Directora de Contenido",
-    image: "/carlos.jpeg",
+    image: "/carlos.webp",
   },
   {
     name: "Miguel Sánchez",
     role: "Director de Operaciones",
-    image: "/daniel.jpeg",
+    image: "/daniel.webp",
   },
 ];
 

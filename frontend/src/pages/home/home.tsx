@@ -7,19 +7,19 @@ const Home = () => {
       id: 1,
       title: "Introducción a la Programación",
       instructor: "Ana García",
-      image: "/programming.jpg",
+      image: "/programming.webp",
     },
     {
       id: 2,
       title: "Diseño UX/UI Avanzado",
       instructor: "Carlos Rodríguez",
-      image: "/ui-ux.jpg",
+      image: "/ui-ux.webp",
     },
     {
       id: 3,
       title: "Marketing Digital",
       instructor: "Laura Martínez",
-      image: "/marketing.jpg",
+      image: "/marketing.webp",
     },
   ];
 

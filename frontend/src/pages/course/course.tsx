@@ -44,13 +44,13 @@ function getCourseData(id: string) {
         id: 2,
         title: "Diseño UX/UI Avanzado",
         instructor: "Carlos Rodríguez",
-        image: "/ui-ux.jpg",
+        image: "/ui-ux.webp",
       },
       {
         id: 3,
         title: "Marketing Digital",
         instructor: "Laura Martínez",
-        image: "/marketing.jpg",
+        image: "/marketing.webp",
       },
     ],
   };
@@ -133,7 +133,7 @@ const Course = () => {
           <div className="lg:col-span-1">
             <div className="bg-white rounded-lg shadow-lg p-6 sticky top-24">
               <img
-                src="/programming.jpg"
+                src="/programming.webp"
                 width={600}
                 height={400}
                 className="w-full rounded-lg mb-4"

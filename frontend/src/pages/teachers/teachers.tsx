@@ -14,7 +14,7 @@ function getTeachers() {
       id: 2,
       name: "Carlos Rodríguez",
       specialty: "Diseño UX/UI",
-      image: "/carlos.jpeg",
+      image: "/carlos.webp",
 
       coursesCount: 2,
     },
@@ -22,14 +22,14 @@ function getTeachers() {
       id: 3,
       name: "Daniel Ochoa",
       specialty: "Marketing Digital",
-      image: "/daniel.jpeg",
+      image: "/daniel.webp",
       coursesCount: 4,
     },
     {
       id: 4,
       name: "Anthony Ramirez",
       specialty: "Ciencia de Datos",
-      image: "/anthony.jpeg",
+      image: "/anthony.webp",
       coursesCount: 3,
     },
   ];
