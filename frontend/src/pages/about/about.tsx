@@ -51,7 +51,7 @@ const About = () => {
               Nuestra Misión
             </h2>
             <p className="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto">
-              En CursosApp, nos dedicamos a democratizar la educación de
+              En Fundacite, nos dedicamos a democratizar la educación de
               calidad, haciendo que el conocimiento sea accesible para todos, en
               cualquier lugar y en cualquier momento.
             </p>
