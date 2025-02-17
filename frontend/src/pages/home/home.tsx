@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CourseCard from "../../components/CourseCard";
 
 const Home = () => {
@@ -35,12 +36,12 @@ const Home = () => {
                 Descubre una nueva forma de aprender con los mejores
                 profesionales
               </p>
-              <a
-                href="/courses"
+              <Link
+                to="/courses"
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-blue-100 transition duration-300 shadow-neon"
               >
                 Explora nuestros cursos
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -55,12 +56,12 @@ const Home = () => {
             ))}
           </div>
           <div className="text-center mt-12">
-            <a
-              href="/courses"
+            <Link
+              to="/courses"
               className="inline-block bg-blue-gradient text-white font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition duration-300 shadow-lg"
             >
               Ver todos los cursos
-            </a>
+            </Link>
           </div>
         </section>
       </div>

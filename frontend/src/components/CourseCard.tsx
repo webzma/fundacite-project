@@ -32,12 +32,12 @@ export default function CourseCard({ course }: CourseCardProps) {
       <div className="p-6">
         <h3 className="font-bold text-xl mb-2 text-blue-800">{course.title}</h3>
         <p className="text-gray-600 mb-4">Instructor: {course.instructor}</p>
-        <a
-          href={`/courses/${course.id}`}
+        <Link
+          to={`/courses/${course.id}`}
           className="inline-block bg-blue-gradient text-white font-semibold py-2 px-4 rounded hover:opacity-90 transition duration-300"
         >
           Inscribirse
-        </a>
+        </Link>
       </div>
     </div>
   );
