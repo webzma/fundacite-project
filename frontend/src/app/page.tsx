@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import CourseCard from "../../components/CourseCard";
+import Link from "next/link";
+import CourseCard from "@/components/courseCard";
 
 const Home = () => {
   const featuredCourses = [
@@ -37,7 +37,7 @@ const Home = () => {
                 profesionales
               </p>
               <Link
-                to="/courses"
+                href="/courses"
                 className="inline-block bg-white text-[#003366] font-semibold py-3 px-6 rounded-lg hover:bg-blue-100 transition duration-300 shadow-neon"
               >
                 Explora nuestros cursos
@@ -57,7 +57,7 @@ const Home = () => {
           </div>
           <div className="text-center mt-12">
             <Link
-              to="/courses"
+              href="/courses"
               className="inline-block bg-blue-gradient text-white font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition duration-300 shadow-lg"
             >
               Ver todos los cursos

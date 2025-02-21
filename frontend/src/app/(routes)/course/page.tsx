@@ -1,4 +1,4 @@
-import CourseCard from "../../components/CourseCard";
+import CourseCard from "@/components/courseCard";
 import { Clock, Users, Gem } from "lucide-react";
 
 // Aquí normalmente harías una llamada a tu API 🚀
@@ -143,16 +143,20 @@ const Course = () => {
               </button>
               <ul className="text-sm text-gray-600">
                 <li className="flex items-center mb-2 gap-2">
-                  <Clock className="text-blue-600" size="20" />
-                  <span className="text-sm text-gray-500">Duración</span>
+                  <Clock className="text-[#003366]" size="20" />
+                  <span className="text-sm text-gray-500">
+                    12 semanas de duración
+                  </span>
                 </li>
                 <li className="flex items-center mb-2 gap-2">
-                  <Users className="text-blue-600" size="20" />
-                  <span className="text-sm text-gray-500">Estudiantes</span>
+                  <Users className="text-[#003366]" size="20" />
+                  <span className="text-sm text-gray-500">422 estudiantes</span>
                 </li>
                 <li className="flex items-center mb-2 gap-2">
-                  <Gem className="text-blue-600" size="20" />
-                  <span className="text-sm text-gray-500">Intermedio</span>
+                  <Gem className="text-[#003366]" size="20" />
+                  <span className="text-sm text-gray-500">
+                    Nivel intermedio
+                  </span>
                 </li>
               </ul>
             </div>

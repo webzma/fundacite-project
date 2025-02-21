@@ -1,4 +1,4 @@
-import TeacherCard from "../../components/TeacherCard";
+import TeacherCard from "@/components/teacherCard";
 
 function getTeachers() {
   // Aquí normalmente harías una llamada a tu API

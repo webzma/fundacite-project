@@ -1,5 +1,4 @@
 import { CheckCircle, Users, BookOpen, Award } from "lucide-react";
-
 const teamMembers = [
   {
     name: "Ana García",
@@ -22,7 +21,6 @@ const teamMembers = [
     image: "/daniel.webp",
   },
 ];
-
 const stats = [
   { label: "Estudiantes", value: "100,000+", icon: Users },
   { label: "Cursos", value: "500+", icon: BookOpen },
@@ -35,7 +33,9 @@ const About = () => {
     <div className="min-h-screen bg-gray-50">
       <section className="bg-blue-gradient text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-bold mb-4">Sobre CursosApp</h1>
+          <h1 className="text-4xl font-bold mb-4 text-white">
+            Sobre Fundacite
+          </h1>
           <p className="text-xl max-w-3xl mx-auto text-gray-200">
             Transformando la educación en línea con cursos de alta calidad y una
             experiencia de aprendizaje única.
@@ -43,7 +43,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:text-center">
@@ -59,7 +58,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
@@ -80,7 +78,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-[#003366] mb-8 text-center">
@@ -106,7 +103,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values Section */}
       <section className="bg-blue-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-[#003366] mb-8 text-center">
@@ -144,14 +140,13 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="bg-blue-gradient text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Únete a nuestra comunidad de aprendizaje
           </h2>
           <p className="text-xl mb-8">
-            Descubre cómo CursosApp puede ayudarte a alcanzar tus metas
+            Descubre cómo Fundacite puede ayudarte a alcanzar tus metas
             educativas y profesionales.
           </p>
           <a

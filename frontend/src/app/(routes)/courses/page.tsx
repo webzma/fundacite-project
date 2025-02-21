@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Select,
   SelectContent,
@@ -5,8 +7,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../components/ui/select";
-import CourseCard from "../../components/CourseCard";
+} from "@/components/ui/select";
+import CourseCard from "@/components/courseCard";
 import { Filter, Search } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -17,7 +19,6 @@ type Course = {
   image: string;
   category: string;
 };
-
 const getCourses = () => {
   // Aquí normalmente harías una llamada a tu API
   return [
