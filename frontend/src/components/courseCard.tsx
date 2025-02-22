@@ -5,7 +5,6 @@ interface CourseCardProps {
   course: {
     id: number;
     title: string;
-    instructor: string;
     image: string;
   };
 }
