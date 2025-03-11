@@ -1,34 +1,29 @@
-import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import type React from "react"
+import { Inter } from "next/font/google"
+import "./globals.css"
+import { AuthProvider } from "@/context/auth-context"
+import { CourseProvider } from "@/context/course-context"
 
-const poppins = Poppins({
-  weight: ["400", "500", "600"],
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] })
 
-export const metadata: Metadata = {
-  title: "Fundacite",
-  description: "Fundacite - Fundación para la Ciencia y la Tecnología",
-};
+export const metadata = {
+  title: "Sistema Administrativo de Talleres y Cursos",
+  description: "Gestiona tus talleres y cursos fácilmente",
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.png" />
-      </head>
-      <body className={`${poppins.className}  antialiased`}>
-        <Navbar />
-        {children}
-        <Footer />
+    <html lang="es">
+      <body className={inter.className}>
+        <AuthProvider>
+          <CourseProvider>{children}</CourseProvider>
+        </AuthProvider>
       </body>
     </html>
-  );
+  )
 }
+
