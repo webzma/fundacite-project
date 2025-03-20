@@ -76,7 +76,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
     if (foundUser) {
       // Omitir la contraseña del objeto de usuario
-      const { password: _, ...userWithoutPassword } = foundUser;
+      const { ...userWithoutPassword } = foundUser;
       setUser(userWithoutPassword);
 
       // Solo guardar en localStorage si rememberMe está activado
@@ -112,7 +112,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem("users", JSON.stringify(updatedUsers));
 
     // Iniciar sesión automáticamente
-    const { password: _, ...userWithoutPassword } = newUser;
+    const { ...userWithoutPassword } = newUser;
     setUser(userWithoutPassword);
     localStorage.setItem("user", JSON.stringify(userWithoutPassword));
 

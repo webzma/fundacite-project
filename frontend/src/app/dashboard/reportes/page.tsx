@@ -114,7 +114,7 @@ export default function Reportes() {
     courses.length > 0 ? Math.round(totalEstudiantes / courses.length) : 0;
 
   // Función para exportar reportes (simulada)
-  const exportarReporte = (formato: any) => {
+  const exportarReporte = (formato: string) => {
     alert(`Reporte exportado en formato ${formato}`);
   };
 

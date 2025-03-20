@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useCourses } from "@/context/course-context";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -25,12 +25,21 @@ import { Label } from "@/components/ui/label";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
-export default function EditarTaller({ params }) {
+export default function EditarTaller() {
   const router = useRouter();
   const { courses, updateCourse } = useCourses();
-  const courseId = params.id;
+  const { id } = useParams();
+  const courseId = id?.toString();
 
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{
+    title: string;
+    description: string;
+    instructor: string;
+    duration: string;
+    capacity: string;
+    status: "pending" | "active";
+    students: number;
+  }>({
     title: "",
     description: "",
     instructor: "",
@@ -53,16 +62,18 @@ export default function EditarTaller({ params }) {
     }
   }, [courseId, courses, router]);
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSelectChange = (name, value) => {
+  const handleSelectChange = (name: string, value: string) => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Validación básica
@@ -72,12 +83,14 @@ export default function EditarTaller({ params }) {
     }
 
     // Actualizar curso
-    updateCourse({
-      ...formData,
-      id: courseId,
-      duration: Number.parseInt(formData.duration),
-      capacity: Number.parseInt(formData.capacity),
-    });
+    if (courseId) {
+      updateCourse({
+        id: courseId,
+        ...formData,
+        duration: Number.parseInt(formData.duration),
+        capacity: Number.parseInt(formData.capacity),
+      });
+    }
 
     router.push("/dashboard/talleres");
   };

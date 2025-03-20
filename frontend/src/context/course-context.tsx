@@ -109,8 +109,8 @@ export function CourseProvider({ children }: { children: React.ReactNode }) {
   const updateCourse = (updatedCourse: Course) => {
     setCourses((prev) =>
       prev.map((course) =>
-        course.id === updatedCourse.id ? updatedCourse : course,
-      ),
+        course.id === updatedCourse.id ? updatedCourse : course
+      )
     );
   };
 
