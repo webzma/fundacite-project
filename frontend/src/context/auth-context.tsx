@@ -68,10 +68,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const login = (
     email: string,
     password: string,
-    rememberMe = false,
+    rememberMe = false
   ): boolean => {
     const foundUser = users.find(
-      (u) => u.email === email && u.password === password,
+      (u) => u.email === email && u.password === password
     );
 
     if (foundUser) {
@@ -134,7 +134,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
       // Actualizar en la lista de usuarios
       const updatedUsers = users.map((u) =>
-        u.id === user.id ? { ...u, ...userData, password: u.password } : u,
+        u.id === user.id ? { ...u, ...userData, password: u.password } : u
       );
       setUsers(updatedUsers);
       localStorage.setItem("users", JSON.stringify(updatedUsers));

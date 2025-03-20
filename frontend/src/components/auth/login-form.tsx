@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { AlertCircle, LogIn } from "lucide-react";
+import { errorMonitor } from "node:stream";
 
 export function LoginForm() {
   const router = useRouter();
@@ -40,11 +41,12 @@ export function LoginForm() {
         router.push("/dashboard");
       } else {
         setError(
-          "Credenciales incorrectas. Intenta con admin@example.com / password",
+          "Credenciales incorrectas. Intenta con admin@example.com / password"
         );
       }
     } catch (err) {
       setError("Ocurrió un error al iniciar sesión");
+      console.error(err);
     } finally {
       setIsLoading(false);
     }

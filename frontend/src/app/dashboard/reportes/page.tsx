@@ -46,10 +46,10 @@ import {
 
 export default function Reportes() {
   const { courses } = useCourses();
-  const [dateRange, setDateRange] = useState({
+  /* const [dateRange, setDateRange] = useState({
     from: undefined,
     to: undefined,
-  });
+  }); */
   const [instructor, setInstructor] = useState("todos");
   const [status, setStatus] = useState("todos");
 

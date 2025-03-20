@@ -23,13 +23,13 @@ interface StatCardProps {
   icon: LucideIcon;
 }
 
-interface Course {
+/* interface Course {
   id: string;
   title: string;
   instructor: string;
   status: "active" | "pending";
   students: number;
-}
+} */
 
 interface ActivityItem {
   type: "success" | "info" | "warning" | "error";
@@ -38,7 +38,7 @@ interface ActivityItem {
 }
 
 // Constants
-const THEME_COLOR = "#193966";
+/* const THEME_COLOR = "#193966"; */
 const RECENT_ACTIVITIES: ActivityItem[] = [
   { type: "success", title: "Nuevo taller creado", time: "Hace 2 horas" },
   { type: "info", title: "Taller actualizado", time: "Hace 5 horas" },

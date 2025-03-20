@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/auth-context";
 import { Button } from "@/components/ui/button";
@@ -53,7 +53,7 @@ export function RegistroForm() {
     return true;
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setError("");
 
@@ -78,6 +78,7 @@ export function RegistroForm() {
       }
     } catch (err) {
       setError("Ocurrió un error al registrar la cuenta");
+      console.error(err);
     } finally {
       setIsLoading(false);
     }
