@@ -1,8 +1,8 @@
 "use client";
 
-import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/auth-context";
+import { FormEvent, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -40,7 +40,7 @@ export function LoginForm() {
         router.push("/dashboard");
       } else {
         setError(
-          "Credenciales incorrectas. Intenta con admin@example.com / password"
+          "Credenciales incorrectas. Intenta con admin@example.com / password",
         );
       }
     } catch (err) {
@@ -52,7 +52,7 @@ export function LoginForm() {
 
   return (
     <Card className="border-border shadow-lg overflow-hidden pb-4 pt-0">
-      <div className="h-2 bg-blue-900 w-full"></div>
+      <div className="h-2 bg-primary w-full"></div>
       <CardHeader className="space-y-1 pb-6">
         <CardTitle className="text-2xl text-center font-bold">
           Iniciar Sesión
@@ -109,7 +109,7 @@ export function LoginForm() {
         <CardFooter className="flex flex-col gap-4 pt-2">
           <Button
             type="submit"
-            className="w-full h-10 mt-6 bg-blue-900 cursor-pointer"
+            className="w-full h-10 mt-6 bg-primary cursor-pointer"
             disabled={isLoading}
           >
             {isLoading ? (

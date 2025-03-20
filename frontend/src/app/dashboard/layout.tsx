@@ -26,11 +26,13 @@ export default function DashboardLayout({
   }
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen">
       <DashboardSidebar />
       <div className="flex-1 p-0">
         <div className="lg:ml-64">
-          <div className="p-4 md:p-6 lg:p-8">{children}</div>
+          <div className="p-4 md:p-6 lg:p-8 fade-in bg-[#f8f8fc]">
+            {children}
+          </div>
         </div>
       </div>
     </div>

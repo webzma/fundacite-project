@@ -35,10 +35,10 @@ export default function Talleres() {
   return (
     <div>
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
-        <h1 className="text-3xl font-bold">Talleres y Cursos</h1>
+        <h1 className="text-3xl font-bold text-primary">Talleres y Cursos</h1>
         <Button asChild>
           <Link href="/dashboard/talleres/crear">
-            <Plus className="mr-2 h-4 w-4" />
+            <Plus className="mr-1 h-4 w-4" />
             Crear Taller
           </Link>
         </Button>

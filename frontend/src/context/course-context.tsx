@@ -1,15 +1,16 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { createContext, useContext, useState, useEffect } from "react"
+import { createContext, useContext, useState, useEffect } from "react";
 
 // Datos de cursos hardcodeados
 const MOCK_COURSES = [
   {
     id: "1",
     title: "Introducción a React",
-    description: "Aprende los fundamentos de React y crea tu primera aplicación.",
+    description:
+      "Aprende los fundamentos de React y crea tu primera aplicación.",
     instructor: "Juan Pérez",
     duration: 12,
     capacity: 20,
@@ -19,7 +20,8 @@ const MOCK_COURSES = [
   {
     id: "2",
     title: "Diseño UX/UI Avanzado",
-    description: "Técnicas avanzadas de diseño de interfaces y experiencia de usuario.",
+    description:
+      "Técnicas avanzadas de diseño de interfaces y experiencia de usuario.",
     instructor: "María González",
     duration: 16,
     capacity: 15,
@@ -46,71 +48,75 @@ const MOCK_COURSES = [
     students: 12,
     status: "active",
   },
-]
+];
 
 type Course = {
-  id: string
-  title: string
-  description: string
-  instructor: string
-  duration: number
-  capacity: number
-  students: number
-  status: "active" | "pending"
-}
+  id: string;
+  title: string;
+  description: string;
+  instructor: string;
+  duration: number;
+  capacity: number;
+  students: number;
+  status: "active" | "pending";
+};
 
 type CourseContextType = {
-  courses: Course[]
-  addCourse: (course: Omit<Course, "id">) => void
-  updateCourse: (course: Course) => void
-  deleteCourse: (id: string) => void
-}
+  courses: Course[];
+  addCourse: (course: Omit<Course, "id">) => void;
+  updateCourse: (course: Course) => void;
+  deleteCourse: (id: string) => void;
+};
 
-const CourseContext = createContext<CourseContextType | undefined>(undefined)
+const CourseContext = createContext<CourseContextType | undefined>(undefined);
 
 export function CourseProvider({ children }: { children: React.ReactNode }) {
-  const [courses, setCourses] = useState<Course[]>([])
+  const [courses, setCourses] = useState<Course[]>([]);
 
   // Cargar cursos del localStorage o usar los mock data
   useEffect(() => {
-    const storedCourses = localStorage.getItem("courses")
+    const storedCourses = localStorage.getItem("courses");
     if (storedCourses) {
       try {
-        setCourses(JSON.parse(storedCourses))
+        setCourses(JSON.parse(storedCourses));
       } catch (error) {
-        console.error("Error parsing stored courses:", error)
-        setCourses(MOCK_COURSES as Course[])
-        localStorage.setItem("courses", JSON.stringify(MOCK_COURSES))
+        console.error("Error parsing stored courses:", error);
+        setCourses(MOCK_COURSES as Course[]);
+        localStorage.setItem("courses", JSON.stringify(MOCK_COURSES));
       }
     } else {
-      setCourses(MOCK_COURSES as Course[])
-      localStorage.setItem("courses", JSON.stringify(MOCK_COURSES))
+      setCourses(MOCK_COURSES as Course[]);
+      localStorage.setItem("courses", JSON.stringify(MOCK_COURSES));
     }
-  }, [])
+  }, []);
 
   // Guardar cursos en localStorage cuando cambien
   useEffect(() => {
     if (courses.length > 0) {
-      localStorage.setItem("courses", JSON.stringify(courses))
+      localStorage.setItem("courses", JSON.stringify(courses));
     }
-  }, [courses])
+  }, [courses]);
 
   const addCourse = (course: Omit<Course, "id">) => {
     const newCourse = {
       ...course,
       id: Date.now().toString(),
       students: course.students || 0,
-    }
-    setCourses((prev) => [...prev, newCourse])
-  }
+    };
+    setCourses((prev) => [...prev, newCourse]);
+  };
 
   const updateCourse = (updatedCourse: Course) => {
-    setCourses((prev) => prev.map((course) => (course.id === updatedCourse.id ? updatedCourse : course)))
-  }
+    setCourses((prev) =>
+      prev.map((course) =>
+        course.id === updatedCourse.id ? updatedCourse : course,
+      ),
+    );
+  };
 
   const deleteCourse = (id: string) => {
-    setCourses((prev) => prev.filter((course) => course.id !== id))
-  }
+    setCourses((prev) => prev.filter((course) => course.id !== id));
+  };
 
   return (
     <CourseContext.Provider
@@ -123,14 +129,13 @@ export function CourseProvider({ children }: { children: React.ReactNode }) {
     >
       {children}
     </CourseContext.Provider>
-  )
+  );
 }
 
 export function useCourses() {
-  const context = useContext(CourseContext)
+  const context = useContext(CourseContext);
   if (context === undefined) {
-    throw new Error("useCourses debe ser usado dentro de un CourseProvider")
+    throw new Error("useCourses debe ser usado dentro de un CourseProvider");
   }
-  return context
+  return context;
 }
-
